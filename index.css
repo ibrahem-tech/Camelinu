@@ -1,0 +1,268 @@
+/* styles.css - Basic styling for CamelInu site */
+:root {
+    --color-sand: #F9E7C2; /* sand background */
+    --color-gold: #D4AF37; /* pharaoh gold */
+    --color-turquoise: #40E0D0; /* bright turquoise */
+    --color-dark: #222222;
+    --color-light: #ffffff;
+    }
+    
+    /* Global Styles */
+    body {
+    margin: 0;
+    font-family: 'Verdana', sans-serif; /* use a clean, legible font for body */
+    background-color: var(--color-sand);
+    color: var(--color-dark);
+    line-height: 1.6;
+    }
+    h1, h2, h3 {
+    font-family: 'Papyrus', fantasy; /* example decorative font for headings (or use an Egyptian-style font) */
+    color: var(--color-dark);
+    margin: 0.5em 0;
+    text-transform: uppercase;
+    }
+    p, li {
+    font-size: 1rem;
+    }
+    a {
+    text-decoration: none;
+    color: var(--color-dark);
+    }
+    ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+    
+    /* Hero Section */
+    .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2em;
+    background: url('desert_pyramids_bg.jpg') center/cover no-repeat;
+    /* Using a desert image as background; ensure it's light enough or overlay a semi-transparent color for contrast */
+    color: var(--color-dark);
+    }
+    .hero-content {
+    flex: 1 1 500px;
+    /* On smaller screens, will take full width */
+    }
+    .hero-content h1 {
+    font-size: 2.5em;
+    color: var(--color-gold);
+    text-shadow: 2px 2px var(--color-dark);
+    }
+    .hero-content p {
+    font-size: 1.2em;
+    max-width: 400px;
+    }
+    .hero-buttons {
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    }
+    .btn {
+    display: inline-block;
+    padding: 0.8em 1.2em;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    }
+    .btn.primary {
+    background-color: var(--color-turquoise);
+    color: var(--color-dark);
+    }
+    .btn.secondary {
+    background-color: var(--color-gold);
+    color: var(--color-dark);
+    }
+    .hero-image {
+    flex: 1 1 400px;
+    text-align: center;
+    }
+    .hero-image img {
+    max-width: 100%;
+    height: auto;
+    }
+    
+    /* About Section */
+    .about {
+    padding: 2em;
+    text-align: center;
+    background: url('papyrus_texture.png') top/cover repeat-y, var(--color-light);
+    /* Papyrus texture as background with light overlay for readability */
+    }
+    .about h2 {
+    margin-bottom: 1em;
+    color: var(--color-dark);
+    }
+    .about p {
+    max-width: 700px;
+    margin: 0 auto 1.5em auto;
+    font-size: 1.1em;
+    }
+    .about .meme-img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 1em;
+    border: 5px solid #e0c28d; /* a border to mimic a panel/frame */
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+    
+    /* Tokenomics Section */
+    .tokenomics {
+    padding: 2em;
+    text-align: center;
+    }
+    .tokenomics h2 {
+    margin-bottom: 1em;
+    }
+    .tokenomics-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    }
+    .token-item {
+    background: #fdf5e6; /* light parchment */
+    border: 2px solid #e0c28d;
+    border-radius: 8px;
+    padding: 1em;
+    flex: 1 1 200px;
+    max-width: 220px;
+    }
+    .token-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    }
+    .token-item p {
+    font-size: 0.95em;
+    margin: 0;
+    }
+    
+    /* Roadmap Section */
+    .roadmap {
+    padding: 2em;
+    background: url('papyrus_texture.png') center/cover repeat-y, var(--color-sand);
+    }
+    .roadmap h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    }
+    .phase {
+    margin-bottom: 1.5em;
+    }
+    .phase h3 {
+    font-size: 1.3em;
+    color: var(--color-dark);
+    margin-bottom: 0.5em;
+    position: relative;
+    }
+    .phase h3::before {
+    /* Decorative icon before phase title (e.g., scarab or pyramid) */
+    content: "🪲 "; /* using a scarab beetle emoji as an example */
+    /* In actual design, use an icon image: content: url('scarab_icon.png'); */
+    position: relative;
+    left: -5px;
+    }
+    .phase ul li {
+    text-align: left;
+    margin: 0.3em 0;
+    padding-left: 1.5em;
+    position: relative;
+    }
+    .phase ul li::before {
+    content: "▹"; /* triangle bullet or ankh symbol maybe */
+    position: absolute;
+    left: 0;
+    color: var(--color-gold);
+    }
+    
+    /* Community Section */
+    .community {
+    padding: 2em;
+    text-align: center;
+    }
+    .community h2 {
+    margin-bottom: 0.5em;
+    }
+    .community p {
+    margin-bottom: 1em;
+    font-size: 1.1em;
+    }
+    .community-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 2em;
+    }
+    .community-btn {
+    display: inline-block;
+    padding: 0.6em 1em;
+    border-radius: 5px;
+    background: var(--color-gold);
+    color: var(--color-dark);
+    font-weight: bold;
+    }
+    .community-btn.telegram { background: #34A5E4; color: #fff; } /* Telegram brand color */
+    .community-btn.twitter { background: #1DA1F2; color: #fff; } /* Twitter brand color */
+    .community-btn.download { background: var(--color-turquoise); color: var(--color-dark); }
+    .chart-embed {
+    max-width: 800px;
+    margin: 0 auto;
+    /* The chart container, script will fill it */
+    border: 2px solid #e0c28d;
+    background: #fff5e6;
+    }
+    #pumpfun-chart {
+    width: 100%;
+    height: 400px;
+    }
+    
+    /* Footer */
+    .footer {
+    background: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+    padding: 1em 0.5em;
+    }
+    .footer p {
+    margin: 0.3em 0;
+    }
+    .footer .social-icons a {
+    color: var(--color-light);
+    margin: 0 0.5em;
+    }
+    .footer .social-icons a:hover {
+    text-decoration: underline;
+    }
+    
+    /* Responsive Media Queries */
+    @media (max-width: 768px) {
+    .hero {
+    text-align: center;
+    padding: 1.5em;
+    }
+    .hero-content, .hero-image {
+    flex: 1 1 100%;
+    }
+    .hero-content h1 {
+    font-size: 2em;
+    }
+    .hero-buttons {
+    justify-content: center;
+    }
+    .about p { font-size: 1em; }
+    .tokenomics-container {
+    flex-direction: column;
+    align-items: center;
+    }
+    .token-item { max-width: 100%; }
+    .community-links {
+    flex-direction: column;
+    align-items: center;
+    }
+    }
